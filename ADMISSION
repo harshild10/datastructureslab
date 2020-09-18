@@ -1,0 +1,41 @@
+#include<bits/stdc++.h>
+using namespace std;
+struct student
+{
+    int age;
+    int marks;
+};
+int main()
+{
+    student *s;
+    int n;
+    cout<<"Enter the no. of students : \n";
+    cin>>n;
+    int i;
+    s=new student[n];
+    cout<<"enter the details of the student :"<<endl;
+    for(i=0;i<n;i++)
+    {
+        cout<<"Enter the details of "<<i+1<<" student : "<<endl;
+        cout<<"Enter age : ";
+        cin>>s[i].age;
+        cout<<"Enter marks :";
+        cin>>s[i].marks;
+        if(s[i].age<20||s[i].marks<0||s[i].marks>100)
+        {
+            cout<<"The details are invalid "<<endl;
+            cout<<"Enter the details again : "<<endl;
+            i--;
+        }
+    }
+    int d=0;
+    for(i=0;i<n;i++)
+    {
+        if(s[i].marks>=65)
+        {
+            d++;
+        }
+    }
+    cout<<"The number of students valid for admission are : "<<d;
+    return 0;
+}
