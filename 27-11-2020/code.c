@@ -31,7 +31,7 @@ void reverse(struct node**head) {
 	struct node *prev,*cur,*next1;
 	cur = *head;
 	prev= NULL;
-    ext1=NULL;
+        next1=NULL;
 	if(*head == NULL) {
 		printf("Empty LIST\n");
 		return;
